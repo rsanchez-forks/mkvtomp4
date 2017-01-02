@@ -192,9 +192,9 @@ def mp4_add_video_cmd(mp4file, video, fps, **opts):
 
 
 def ffmpeg_convert_audio_cmd(old, new, **opts):
-    bitrate = opts.get('bitrate', '128')
-    channels = opts.get('channels', '2')
-    codec = opts.get('codec', 'libfaac')
+    bitrate = opts.get('a_bitrate', '128')
+    channels = opts.get('a_channels', '2')
+    codec = opts.get('a_codec', 'libfaac')
     verbosity = opts.get('verbosity', 0)
     if str(channels) == '5.1':
         channels = '6'
