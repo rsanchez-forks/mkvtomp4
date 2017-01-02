@@ -131,7 +131,7 @@ def default_options(argv0):
         'verbosity': 0,
         'a_bitrate': '328',
         'a_channels': '5.1',
-        'a_codec': 'libfaac',
+        'a_codec': 'aac',
         'a_delay': None,
         'output': None,
         'video_track': None,
@@ -194,7 +194,7 @@ def mp4_add_video_cmd(mp4file, video, fps, **opts):
 def ffmpeg_convert_audio_cmd(old, new, **opts):
     bitrate = opts.get('a_bitrate', '128')
     channels = opts.get('a_channels', '2')
-    codec = opts.get('a_codec', 'libfaac')
+    codec = opts.get('a_codec', 'aac')
     verbosity = opts.get('verbosity', 0)
     if str(channels) == '5.1':
         channels = '6'
